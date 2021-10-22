@@ -138,7 +138,7 @@ function* getUsersSaga(action) {
 
 export function getUsersSagaStart(){
   return{
-    type: GET_USERS_SAGA_START
+    type: GET_USERS_SAGA_START,
   }
 }
 

@@ -17,14 +17,14 @@ const initialState = "ALL"
 
 
 // 리듀서
-const reducer = (previousState = initialState, action)=>{
+const reducer = (state = initialState, action)=>{
   if (action.type === SHOW_COMPLETE) {
     return "COMPLETE"
   }
   if (action.type === SHOW_ALL) {
     return "ALL"
   }
-  return previousState;
+  return state;
 }
 
 export default reducer

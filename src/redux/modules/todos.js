@@ -21,19 +21,19 @@ export const completeTodo =(index)=>{
 const initialState = []
 
 // 리듀서
-const reducer= (previousState = initialState, action)=>{
+const reducer= (state = initialState, action)=>{
   if (action.type === ADD_TODO) {
-    return [...previousState, {text: action.text, done: false}]
+    return [...state, {text: action.text, done: false}]
   }
   if (action.type === COMPLETE_TODO) {
-    return previousState.map((todo, index)=>{
+    return state.map((todo, index)=>{
       if(index === action.index) {
         return { ...todo, done: true}
       }
       return todo;
     })
   }
-  return previousState;
+  return state
 }
 
 export default reducer
